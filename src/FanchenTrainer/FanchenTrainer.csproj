@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <LangVersion>12</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>FanchenTrainer</AssemblyName>
+    <Version>0.1.5</Version>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <EnableDefaultItems>true</EnableDefaultItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Compile against the exact .NET 6 runtime shipped by the local IL2CPP loader. -->
+    <Reference Include="../../vendor/bepinex788/dotnet/System*.dll" Exclude="../../vendor/bepinex788/dotnet/*Native*.dll" Private="false" />
+    <Reference Include="../../vendor/bepinex788/dotnet/mscorlib.dll" Private="false" />
+    <Reference Include="../../vendor/bepinex788/dotnet/netstandard.dll" Private="false" />
+    <Reference Include="../../vendor/bepinex788/BepInEx/core/BepInEx.Core.dll" Private="false" />
+    <Reference Include="../../vendor/bepinex788/BepInEx/core/BepInEx.Unity.IL2CPP.dll" Private="false" />
+    <Reference Include="../../vendor/bepinex788/BepInEx/core/Il2CppInterop.Runtime.dll" Private="false" />
+    <Reference Include="../../vendor/bepinex788/BepInEx/core/0Harmony.dll" Private="false" />
+    <Reference Include="../../refs/interop-build25617557/*.dll" Private="false" />
+  </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.Versioning.SupportedOSPlatformAttribute">
+      <_Parameter1>windows</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+</Project>
